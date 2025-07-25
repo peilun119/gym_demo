@@ -4,6 +4,6 @@
 
 - h1~h6
 - br
-- em,b,u
+- em,bu
 - ul,li
 - img,a
