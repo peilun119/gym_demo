@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    background-color: beige;
+    font-family: 標楷體, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    display: inline-block;
+    width: 60%;
+    background-color: rgb(255, 193, 101);
+    color: rgb(49, 131, 238);
+}
+
+form {
+    background-color: rgb(185, 212, 240);
+    width: 40%;
+    margin: 2px auto;
+    padding: 10px 0px;
+    border: 2px rgb(68, 68, 240) solid;
+    border-radius: 12px;
+}
+
+button {
+    background-color: rgb(243, 142, 201);
+    width: 120px;
+    height: 25px;
+    border: none;
+}
