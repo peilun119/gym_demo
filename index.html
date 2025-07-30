@@ -9,10 +9,46 @@
         body {
             text-align: center;
             background-color: beige;
+            font-family: 標楷體, Arial, Helvetica, sans-serif;
         }
 
+        /* . -> class */
         .sub-title {
             background-color: rgb(115, 219, 185);
+        }
+
+        .content {
+            background-color: darksalmon;
+            padding: 12px 24px;
+        }
+
+        /* # -> id */
+        #image {
+            background-color: rgb(184, 238, 220);
+            border: 2px black solid;
+        }
+
+        /* id image 底下的 img標籤 */
+        #image img {
+            margin: 12px;
+            width: 30%;
+            border-radius: 12px;
+        }
+
+        #bmiTable {
+            width: 60%;
+            height: 300px;
+            margin: 12px auto;
+        }
+
+        #bmiTable th {
+            background-color: rgb(201, 150, 250);
+        }
+
+        #bmiTable td {
+            background-color: rgb(84, 68, 99);
+            color: aliceblue;
+            text-align: center;
         }
     </style>
 
@@ -22,19 +58,22 @@
     <h1 style="background-color: rgb(255, 193, 101);color: rgb(49, 131, 238);">何謂健身?</h1>
     <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVfOooRfhjyDOaWi34RVCSmiJF2IxXS3Yk8A&s"
         alt="健身圖片.jpg">
-    <h3>
-        健身，英文稱為workout，健身這兩個字拆開來的意思就是健康身體，通過各種運動方式或方法來增強力量、增加肌肉量、柔韌性、耐力，以及提高協調和控制身體各部分的能力來使我們的身體更強健。
-    </h3>
-    <p>
-        除了塑造好身材，<br>透過健身可以刺激我們身體的肌肉，再搭配飲食的控制，這能大大幫助我們的肌肉量增加，以及讓我們的肌肉更加的結實。
-        <em>
-            如果你對健身仍然保持著懷疑的態度，那你大可以去看看你喜歡的健身老戲骨幹，他們是如何做到年過50/60歲，依舊在
-            舞臺上或者是電影螢幕上綻放光彩。
-        </em>
-        <b>
-            <u>答案就是堅持運動健身!</u>
-        </b>
-    </p>
+
+    <div class="content">
+        <h3>
+            健身，英文稱為workout，健身這兩個字拆開來的意思就是健康身體，通過各種運動方式或方法來增強力量、增加肌肉量、柔韌性、耐力，以及提高協調和控制身體各部分的能力來使我們的身體更強健。
+        </h3>
+        <p>
+            除了塑造好身材，<br>透過健身可以刺激我們身體的肌肉，再搭配飲食的控制，這能大大幫助我們的肌肉量增加，以及讓我們的肌肉更加的結實。
+            <em>
+                如果你對健身仍然保持著懷疑的態度，那你大可以去看看你喜歡的健身老戲骨幹，他們是如何做到年過50/60歲，依舊在
+                舞臺上或者是電影螢幕上綻放光彩。
+            </em>
+            <b>
+                <u>答案就是堅持運動健身!</u>
+            </b>
+        </p>
+    </div>
     <hr>
     <h2 class="sub-title">健身的10個好處</h2>
     <ol type="1" style="text-align: left;">
@@ -50,21 +89,24 @@
         <li>增加肌肉助於減肥</li>
     </ol>
     <hr>
-    <h2>好文章連結</h2>
-    <li><a href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/hero-6"
-            target="_blank">健身初學者必看！10個常見的健身迷思</a>
-    </li>
-    <li>
-        <a href="https://www.pressplay.cc/project/2667A183130728C4AE30928EF3CFF4DD/articles/81556364B0DF014CE15B7625654B25B7?srsltid=AfmBOoq1qexP0qDf7OxNGfNcmfJJ6pWWYRaMrVvHHl35hVrqdQaPrGTZ"
-            target="_blank">動起來就是最好良藥！如何不知不覺養成「動習慣」</a>
-    </li>
-    <li>
-        <a href="https://www.pressplay.cc/project/D8AC93FBA6BB76096D53BB691E325C0A/articles/6E231DB2FD9CE20F9B3C4B0F5D3C9188?srsltid=AfmBOopAEGRgKyzUoJyJS7Wd8W63N2ZP2HSbDYR8FX-DL6-t9hUyIeW9"
-            target="_blank">飲食調整：讓自己不再練心酸的關鍵因素</a>
-    </li>
+
+    <h2 class="sub-title">好文章連結</h2>
+    <div class="content">
+        <li><a href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/hero-6"
+                target="_blank">健身初學者必看！10個常見的健身迷思</a>
+        </li>
+        <li>
+            <a href="https://www.pressplay.cc/project/2667A183130728C4AE30928EF3CFF4DD/articles/81556364B0DF014CE15B7625654B25B7?srsltid=AfmBOoq1qexP0qDf7OxNGfNcmfJJ6pWWYRaMrVvHHl35hVrqdQaPrGTZ"
+                target="_blank">動起來就是最好良藥！如何不知不覺養成「動習慣」</a>
+        </li>
+        <li>
+            <a href="https://www.pressplay.cc/project/D8AC93FBA6BB76096D53BB691E325C0A/articles/6E231DB2FD9CE20F9B3C4B0F5D3C9188?srsltid=AfmBOopAEGRgKyzUoJyJS7Wd8W63N2ZP2HSbDYR8FX-DL6-t9hUyIeW9"
+                target="_blank">飲食調整：讓自己不再練心酸的關鍵因素</a>
+        </li>
+    </div>
     <hr>
     <h2 class="sub-title">一天所需卡路里</h2>
-    <table border="1">
+    <table border="1" id="bmiTable">
         <thead>
             <tr>
                 <th>每天活動量</th>
@@ -93,16 +135,20 @@
         </thead>
     </table>
     <br>
-    <b>&reg;<a href="BMI.html">計算BMI:&nbsp;</a></b>
-    一位民眾身高160公分，體重65公斤，BMI25.4kg/m2(=65÷1.6÷1.6)，體重屬於「過重」。
-    <br>
-    <b>&reg;計算所需熱量:&nbsp;</b>
-    因他的工作為坐辦公室，屬輕量工作，每天攝取熱量應在1300至1625大卡之間(=20~25大卡*65公斤)。
+    <div style="text-align: left;margin-left: 16px;">
+        <b>&reg;<a href="BMI.html">計算BMI:&nbsp;</a></b>
+        一位民眾身高160公分，體重65公斤，BMI25.4kg/m2(=65÷1.6÷1.6)，體重屬於「過重」。
+        <br>
+        <b>&reg;計算所需熱量:&nbsp;</b>
+        因他的工作為坐辦公室，屬輕量工作，每天攝取熱量應在1300至1625大卡之間(=20~25大卡*65公斤)。
+    </div>
     <hr>
     <h2>健身圖片</h2>
-    <img width="33%" src="img/pic-1.jpg" alt="pic-1.jpg">
-    <img width="33%" src="img/pic-2.jpg" alt="pic-2.jpg">
-    <img width="33%" src="img/pic-3.jpg" alt="pic-3.jpg">
+    <div id="image">
+        <img src="img/pic-1.jpg" alt="pic-1.jpg">
+        <img src="img/pic-2.jpg" alt="pic-2.jpg">
+        <img src="img/pic-3.jpg" alt="pic-3.jpg">
+    </div>
     <hr>
     <h2 class="sub-title">健身影片</h2>
     <iframe width="50%" height="360" src="https://www.youtube.com/embed/L1BTJsDAWjo"
