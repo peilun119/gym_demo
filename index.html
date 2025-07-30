@@ -50,6 +50,37 @@
             color: aliceblue;
             text-align: center;
         }
+
+        #bmiTable td:first-child {
+            background-color: rgb(201, 150, 250);
+            color: black;
+        }
+
+        /* display: inline 區塊設定為內容大小,設定長寬無效果 */
+        /* display: inline-block 區塊設定的內容大小,長寬,顏色都可自定義 */
+        h2 {
+            display: inline-block;
+            width: 300px;
+            padding: 4px;
+            border-radius: 6px;
+            border: 1px solid rgb(6, 82, 6);
+        }
+
+        form {
+            background-color: rgb(185, 212, 240);
+            width: 40%;
+            margin: 2px auto;
+            padding: 10px 0px;
+            border: 2px rgb(68, 68, 240) solid;
+            border-radius: 12px;
+        }
+
+        button {
+            background-color: rgb(243, 142, 201);
+            width: 120px;
+            height: 60x;
+            border: none;
+        }
     </style>
 
 </head>
@@ -151,32 +182,37 @@
     </div>
     <hr>
     <h2 class="sub-title">健身影片</h2>
-    <iframe width="50%" height="360" src="https://www.youtube.com/embed/L1BTJsDAWjo"
-        title="7 分鐘居家徒手腹肌訓練【初級版】無裝備｜7 Min Standing Abs workout｜非常適合初學者入門也有效加强核心的訓練｜男生和女生都適合的健身訓練【健身運動】" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="49%" height="360" src="https://www.youtube.com/embed/TtbrOIUYtGw"
-        title="30分鐘 超慢跑｜初學節拍超慢跑｜180BPM｜暖身+伸展｜有音樂♫" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div>
+        <iframe width="50%" height="360" src="https://www.youtube.com/embed/L1BTJsDAWjo"
+            title="7 分鐘居家徒手腹肌訓練【初級版】無裝備｜7 Min Standing Abs workout｜非常適合初學者入門也有效加强核心的訓練｜男生和女生都適合的健身訓練【健身運動】"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="49%" height="360" src="https://www.youtube.com/embed/TtbrOIUYtGw"
+            title="30分鐘 超慢跑｜初學節拍超慢跑｜180BPM｜暖身+伸展｜有音樂♫" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <video src="video/file_example_MP4_480_1_5MG.mp4" controls width="99%"></video>
+        <!-- <video src="video/file_example_MP4_480_1_5MG.mp4" controls width="99%"></video> -->
+    </div>
     <hr>
-    <h2>表單</h2>
-    <h3>需要更多資訊?免費索取健身資訊</h3>
-    <p>前100名還贈送［我愛健身］書籍一本!</p>
+    <div class="form">
+        <h2 class="sub-title">表單</h2>
+        <h3>需要更多資訊?免費索取健身資訊</h3>
+        <p>前100名還贈送［我愛健身］書籍一本!</p>
 
-    <form action="">
-        <label for="email">Email:&nbsp;</label>
-        <input type="text" name="email" id="email" placeholder="Enter Email">
-        <br>
-        <label for="">是否經常運動?</label>
-        <input type="checkbox" name="yes">是<input type="checkbox" name="no">否
-        <p>您的寶貴意見:</p>
-        <textarea name="command" id="command" cols="30" rows="20"></textarea>
-        <br>
-        <button type="submit">送出</button>
-    </form>
+        <form action="">
+            <label for="email">Email:&nbsp;</label>
+            <input type="text" name="email" id="email" placeholder="Enter Email">
+            <br>
+            <label for="">是否經常運動?</label>
+            <input type="checkbox" name="yes">是<input type="checkbox" name="no">否
+            <p>您的寶貴意見:</p>
+            <textarea name="command" id="command" cols="30" rows="20"></textarea>
+            <br>
+            <button type="submit">送出</button>
+        </form>
+    </div>
 </body>
 
 </html>
