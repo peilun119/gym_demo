@@ -23,6 +23,7 @@
 
         input {
             font-size: 22px;
+            text-align: center;
         }
     </style>
 
@@ -37,12 +38,12 @@
         <input type="text" id="name" name="name" required placeholder="請輸入姓名">
         <br>
         <label for="height">身高:&nbsp;</label>
-        <input type="number" id="height" name="height" step="0.1" required>
+        <input type="number" id="height" name="height" step="0.1" required placeholder="178.9">
         <br>
         <label for="weight">體重:&nbsp;</label>
-        <input type="number" id="weight" name="weight" step="0.1" required>
+        <input type="number" id="weight" name="weight" step="0.1" required placeholder="88.8">
         <p>
-            <button type="submit">計算</button>
+            <button type="submit" onclick="calc()">計算</button>
         </p>
     </form>
 
@@ -61,18 +62,34 @@
         // let weight = 98;
 
         // 外部輸入
-        let height = Number(prompt("請輸入身高:"));
-        let weight = Number(prompt("請輸入體重:"));
+        // let height = Number(prompt("請輸入身高:"));
+        // let weight = Number(prompt("請輸入體重:"));
 
         //let bmi = weight / (height / 100) ** 2;
 
-        let bmi = getBMI(weight, height);
+        function calc() {
 
-        let comment = getComment(bmi);
+            // 取得元件內容
+            const heightEl = document.querySelector('#height');  //input#height .....
+            const weightEl = document.querySelector('#weight');  //input#weight .....
 
-        document.write(`<br><h1>身高:${height} <br>體重:${weight} <br>BMI=${bmi.toFixed(2)}</h1>`);
+            console.log(heightEl, weightEl)
 
-        document.write(`<br><h2 style = "color:blue">${comment}</h2>`);
+            let height = heightEl.value;
+            let weight = weightEl.value;
+
+
+            let bmi = getBMI(weight, height);
+
+            let comment = getComment(bmi);
+
+            document.write(`<br><h1>身高:${height} <br>體重:${weight} <br>BMI=${bmi.toFixed(2)}</h1>`);
+
+            document.write(`<br><h2 style = "color:blue">${comment}</h2>`);
+
+
+        }
+
 
 
         // for 迴圈
