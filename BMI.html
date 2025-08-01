@@ -25,6 +25,8 @@
             font-size: 22px;
         }
     </style>
+
+    <script src="js/tools.js"></script>
 </head>
 
 <body>
@@ -42,8 +44,86 @@
         <p>
             <button type="submit">計算</button>
         </p>
-        <a href="index.html">回首頁</a>
     </form>
+
+    <a href="index.html">回首頁</a>
+
+    <!-- 程式區 -->
+    <script>
+
+        // 函式化
+        //function getBMI(weight, height) {
+        //    let bmi = weight / (height / 100) ** 2
+        //    return bmi
+        //}
+
+        // let height = 188.5;
+        // let weight = 98;
+
+        // 外部輸入
+        let height = Number(prompt("請輸入身高:"));
+        let weight = Number(prompt("請輸入體重:"));
+
+        //let bmi = weight / (height / 100) ** 2;
+
+        let bmi = getBMI(weight, height);
+
+        let comment = getComment(bmi);
+
+        document.write(`<br><h1>身高:${height} <br>體重:${weight} <br>BMI=${bmi.toFixed(2)}</h1>`);
+
+        document.write(`<br><h2 style = "color:blue">${comment}</h2>`);
+
+
+        // for 迴圈
+        for (let i = 0; i < 0; i++) {
+
+            //提示第幾次出數
+            //alert(`目前第${i + 1}次輸入`);
+            //let x = 10;
+            let x = Number(prompt(`第${i + 1}次輸入,請輸入第一個數字:`));  // 輸入資料 prompt()
+            //let y = 20;
+            let y = Number(prompt("請輸入第二個數字:"));
+            //let z = x + y;
+            let op = prompt("請輸入(+-*/)=>(q:exit)");
+            if (op == "q") break;
+            let z;  // let 全域宣告後,區域不用宣告
+
+
+            if (op == "+") {
+                z = x + y;
+            } else if (op == "-") {
+                z = x - y;
+            } else if (op == "*") {
+                z = x * y;
+            } else if (op == "/") {
+                z = x / y;
+            } else {
+                alert("輸入錯誤!");
+            }
+
+
+            console.log(x, y, z);
+
+            //x = "10";
+            //y = 20;
+            // z = 30;   // 報錯:Uncaught TypeError: Assignment to constant variable.
+            //z = Number(x) + Number(y);
+            //console.log(typeof (x), typeof (y), typeof (z));
+
+            // document.write("<br>", x, y, z);
+            // document.write("<br><h1>" + x + y + z);
+            // ` ` 反引號包起來,並用${ }包住變數,相當於python的f'{變數} {變數}'
+            //document.write(`<br><b>x=${x}  y=${y}  x+y=${z}</b>`);
+            // alert() 會彈出視窗,不吃 HTML 標籤語法
+            // alert(`x=${x}  y=${y}  x+y=${z}`)
+
+            // Math 
+            document.write(`<br><b>x=${x}  y=${y}  x${op}y=${z.toFixed(2)}</b>`);
+
+        }
+
+    </script>
 </body>
 
 </html>
