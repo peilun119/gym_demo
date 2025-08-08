@@ -25,6 +25,10 @@
             font-size: 22px;
             text-align: center;
         }
+
+        h2 {
+            color: blue;
+        }
     </style>
 
     <script src="js/tools.js"></script>
@@ -43,14 +47,26 @@
         <label for="weight">體重:&nbsp;</label>
         <input type="number" id="weight" name="weight" step="0.1" required placeholder="88.8">
         <p>
-            <button type="submit" onclick="calc()">計算</button>
+            <button type="button" onclick="calc()">計算</button>
         </p>
     </form>
 
     <a href="index.html">回首頁</a>
 
+    <div id="result">
+
+
+    </div>
+
+
+
     <!-- 程式區 -->
     <script>
+        const resultEl = document.querySelector('#result');
+        console.log(resultEl);
+        // .innerHTML 直接輸出資料,吃標籤語法
+        // .innerText 直接輸出資料,不吃標籤語法
+        //resultEl.innerHTML = "<h1>BMI:25.5</h1>";
 
         // 函式化
         //function getBMI(weight, height) {
@@ -72,20 +88,24 @@
             // 取得元件內容
             const heightEl = document.querySelector('#height');  //input#height .....
             const weightEl = document.querySelector('#weight');  //input#weight .....
+            const nameEl = document.querySelector('#name');  //input#name .....
 
             console.log(heightEl, weightEl)
 
             let height = heightEl.value;
             let weight = weightEl.value;
+            let name = nameEl.value;
 
 
             let bmi = getBMI(weight, height);
 
             let comment = getComment(bmi);
 
-            document.write(`<br><h1>身高:${height} <br>體重:${weight} <br>BMI=${bmi.toFixed(2)}</h1>`);
-
-            document.write(`<br><h2 style = "color:blue">${comment}</h2>`);
+            // 輸出在畫面
+            resultEl.innerHTML = `<h2>BMI=${bmi.toFixed(2)}</h2>`;
+            //document.write(`<br><h1>身高:${height} <br>體重:${weight} <br>BMI=${bmi.toFixed(2)}</h1>`);
+            resultEl.innerHTML += `<h2>${name} ${comment}</h2>`;
+            //document.write(`<br><h2 style = "color:blue">${comment}</h2>`);
 
 
         }
